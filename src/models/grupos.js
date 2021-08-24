@@ -1,3 +1,5 @@
+const NaoPodeSerNulo = require('../erros/NaoPodeSerNulo')
+
 'use strict';
 const {
   Model
@@ -16,9 +18,30 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Grupos.init({
-    nome: DataTypes.STRING,
-    base: DataTypes.STRING,
-    website: DataTypes.STRING
+    nome: {
+      type: DataTypes.STRING,
+      validate: {
+        funcaoValidadora: function (dado) {
+          if(dado === null || dado < 1) throw new NaoPodeSerNulo('Nome')
+        }
+      }
+    },
+    base: {
+      type: DataTypes.STRING,
+      validate: {
+        funcaoValidadora: function (dado) {
+          if(dado === null || dado < 1) throw new NaoPodeSerNulo('Base')
+        }
+      }
+    },
+    website: {
+      type: DataTypes.STRING,
+      validate: {
+        funcaoValidadora: function (dado) {
+          if(dado === null || dado.length < 5) throw new NaoPodeSerNulo('Website')
+        }
+      }
+    },
   }, {
     sequelize,
     modelName: 'Grupos',

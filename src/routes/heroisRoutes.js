@@ -9,4 +9,6 @@ router.post('/herois', HeroiController.postHeroi)
 router.patch('/herois/:id', HeroiController.patchHeroi)
 router.delete('/herois/:id', HeroiController.deleteHeroi)
 
+router.post('/herois/ficha', HeroiController.postDocClickSign)
+
 module.exports = router

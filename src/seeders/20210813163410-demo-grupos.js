@@ -7,35 +7,35 @@ module.exports = {
       {
 				nome: 'Vingadores',
 				base: 'Torre dos Vingadores',
-				website: 'vingadores@marvel.com',
+				website: 'www.vingadores.com',
 				createdAt: new Date(),
 				updatedAt: new Date()
 			},
 			{
 				nome: 'Inumanos',
 				base: 'Atilan',
-				website: 'atilan@marvel.com',
+				website: 'www.atilan.com',
 				createdAt: new Date(),
 				updatedAt: new Date()
 			},
 			{
 				nome: 'Liga da Justiça',
 				base: 'Estação Espacial',
-				website: 'ligadajustica@dc.com',
+				website: 'www.ligadajustica.com',
 				createdAt: new Date(),
 				updatedAt: new Date()
 			},
 			{
 				nome: 'My Hero Academia',
 				base: 'UA',
-				website: 'mha@ua.com',
+				website: 'www.ua.com',
 				createdAt: new Date(),
 				updatedAt: new Date()
 			},
 			{
 				nome: 'X-Men',
 				base: 'Mansão do Professor X',
-				website: 'mutantes@marvel.com',
+				website: 'www.mutantes.com',
 				createdAt: new Date(),
 				updatedAt: new Date()
 			}

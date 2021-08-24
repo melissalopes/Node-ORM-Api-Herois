@@ -1,3 +1,5 @@
+const NaoPodeSerNulo = require('../erros/NaoPodeSerNulo')
+
 'use strict';
 const {
   Model
@@ -16,10 +18,38 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Herois.init({
-    nome: DataTypes.STRING,
-    poder: DataTypes.STRING,
-    fraqueza: DataTypes.STRING,
-    identidadeSecreta: DataTypes.STRING
+    nome: {
+      type: DataTypes.STRING,
+      validate: {
+        funcaoValidadora: function (dado) {
+          if(dado === null || dado < 1) throw new NaoPodeSerNulo('Nome')
+        }
+      }
+    },
+    poder: {
+      type: DataTypes.STRING,
+      validate: {
+        funcaoValidadora: function (dado) {
+          if(dado === null || dado.length < 3) throw new NaoPodeSerNulo('Poder')
+        }
+      }
+    },
+    fraqueza: {
+      type: DataTypes.STRING,
+      validate: {
+        funcaoValidadora: function (dado) {
+          if(dado === null || dado < 1) throw new NaoPodeSerNulo('Fraqueza')
+        }
+      }
+    },
+    identidadeSecreta: {
+      type: DataTypes.STRING,
+      validate: {
+        funcaoValidadora: function (dado) {
+          if(dado === null || dado < 1) throw new NaoPodeSerNulo('Identidade Secreta')
+        }
+      }
+    },
   }, {
     sequelize,
     modelName: 'Herois',

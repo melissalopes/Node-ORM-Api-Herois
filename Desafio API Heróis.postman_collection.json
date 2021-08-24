@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "ae1ac7d7-57a1-4f9b-a1b0-4451e2b7e138",
+		"name": "Desafio API Heróis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GRUPOS",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3002/grupos",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"grupos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET GRUPO POR ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3002/grupos/5",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"grupos",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nome\": \"Novos Vingadores\",\r\n        \"base\": \"Torre dos Vingadores\",\r\n        \"website\": \"www.novosvingadores.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3002/grupos",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"grupos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nome\": \"NOVOS VINGADORES\",\r\n        \"base\": \" ---- \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3002/grupos/6",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"grupos",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3002/grupos/6",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"grupos",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET UM HEROI DO GRUPO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3002/grupos/4/heroi/7",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"grupos",
+								"4",
+								"heroi",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET TODOS OS HEROIS DE UM GRUPO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3002/grupos/1/herois",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"grupos",
+								"1",
+								"herois"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HEROIS",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3002/herois",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"herois"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET HEROI POR ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3002/herois/7",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"herois",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nome\": \"Alguem\",\r\n        \"poder\": \"Algum\",\r\n        \"fraqueza\": \"Alguma\",\r\n        \"identidadeSecreta\": \"Alguma\",\r\n        \"grupo_id\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3002/herois",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"herois"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nome\": \"B\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3002/herois/10",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"herois",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3002/herois/10",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"herois",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CLICK SIGN",
+			"item": [
+				{
+					"name": "TESTE CLICKSIGN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"document\": {\r\n    \"path\": \"/Fichas/Spiderman.docx\",\r\n    \"template\": {\r\n      \"data\": {\r\n          \"nomeHeroi\": \"Spiderman\",\r\n          \"identidadeSecretaHeroi\": \"Peter Parker\",\r\n          \"nomeGrupo\": \"Avengers\",\r\n          \"PoderHeroi\": \"Spider powers\",\r\n          \"fraquezaHeroi\": \"Insecticide\",\r\n          \"siteGrupo\": \"www.avengers.com\"\r\n      }\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://sandbox.clicksign.com/api/v1/templates/3c2eaf75-e11a-4e10-a480-9377df332b7e/documents?access_token=4022cf56-74d6-4518-b641-50c1a800ba09",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"clicksign",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"templates",
+								"3c2eaf75-e11a-4e10-a480-9377df332b7e",
+								"documents"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "4022cf56-74d6-4518-b641-50c1a800ba09"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FICHA HEROI",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3002/herois/ficha",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"herois",
+								"ficha"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
