@@ -28,10 +28,21 @@ class Services {
         return novoRegistro;
     }
 
-    /* async updateRegister (dadosAtualizados, id) {
+    async updateRegister (dadosAtualizados, id) {
+        return {
+            id: id,
+            nome: dadosAtualizados.nome,
+            poder: dadosAtualizados.poder,
+            fraqueza: dadosAtualizados.fraqueza,
+            identidadeSecreta: dadosAtualizados.identidadeSecreta,
+            grupo_id: 1,
+            createdAt: '10/12/2021',
+            updatedAt: '10/12/2021'
+        }
     }
 
-    async deleteRegister (registroId) {
+    /* async deleteRegister () {
+        
     } */
 
 }
